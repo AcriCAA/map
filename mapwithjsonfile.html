@@ -16,6 +16,8 @@
         <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
 <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
 
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
     </head>
 
 
@@ -42,8 +44,24 @@ var featureLayer = L.mapbox.featureLayer()
     .addTo(map);
 
 
+var paths = = { type: 'LineString', coordinates: [] };
 
-    
+
+
+
+$.getJSON('./points.json', function(data) {
+    var geojson = L.geoJson(data, {
+        onEachFeature: function(feature, layer) {
+            feature.geometry.coordinates.forEach(function(p) {
+                paths.addLatLng(L.latLng(p[0], p[1]));
+            });
+        }
+    });
+});
+
+
+// Add this generated geojson object to the map.
+paths.addTo(map);;     
 
 
 var geojson = L.mapbox.featureLayer()
