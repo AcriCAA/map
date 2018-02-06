@@ -85,22 +85,32 @@ tick();
 var j = 0;
 
 // Create a marker and add it to the map.
-var marker = L.marker([0, 0], {
-  icon: L.mapbox.marker.icon({
-    'marker-color': '#f86767'
-  })
-}).addTo(map);
+// var marker = L.marker([0, 0], {
+//   icon: L.mapbox.marker.icon({
+//     'marker-color': '#f86767'
+//   })
+// }).addTo(map);
 
 
 function tick() {
-    // Set the marker to be at the same point as one
-    // of the segments or the line.
-    marker.setLatLng(L.latLng(
-        paths[0].geometry.coordinates[j][1],
-        paths[0].geometry.coordinates[j][0]));
 
+  paths.forEach(function(path) {
+
+    var marker = L.marker([0, 0], {
+    icon: L.mapbox.marker.icon({
+      'marker-color': '#f86767'
+    })
+    }).addTo(map);
+
+    marker.setLatLng(L.latLng(
+        path.geometry.coordinates[j][1],
+        path.geometry.coordinates[j][0]));
+
+    
     // Move to the next point of the line
     // until `j` reaches the length of the array.
-    if (++j < paths[0].geometry.coordinates.length) setTimeout(tick, 500);
+    if (++j < path.geometry.coordinates.length) setTimeout(tick, 500);
+
+  });
 }
 </script>
