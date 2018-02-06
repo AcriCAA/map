@@ -44,20 +44,22 @@ var featureLayer = L.mapbox.featureLayer()
     .addTo(map);
 
 
-var paths = { type: 'LineString', coordinates: [] };
+var paths = $.geojson('./points/json'); 
+
+console.log(paths); 
 
 
 
 
-$.getJSON('./points.json', function(data) {
-    var geojson = L.geoJson(data, {
-        onEachFeature: function(feature, layer) {
-            feature.geometry.coordinates.forEach(function(p) {
-                paths.coordsToLatLng(L.latLng(p[0], p[1]));
-            });
-        }
-    });
-});
+// $.getJSON('./points.json', function(data) {
+//     var geojson = L.geoJson(data, {
+//         onEachFeature: function(feature, layer) {
+//             feature.geometry.coordinates.forEach(function(p) {
+//                 paths.addLatLng(L.latLng(p[0], p[1]));
+//             });
+//         }
+//     });
+// });
 
 
 // Add this generated geojson object to the map.
