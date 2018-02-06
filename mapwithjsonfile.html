@@ -44,26 +44,21 @@ var featureLayer = L.mapbox.featureLayer()
     .addTo(map);
 
 
-var paths = $.getJson('./points/json'); 
-
-console.log(paths); 
 
 
-
-
-// $.getJSON('./points.json', function(data) {
-//     var geojson = L.geoJson(data, {
-//         onEachFeature: function(feature, layer) {
-//             feature.geometry.coordinates.forEach(function(p) {
-//                 paths.addLatLng(L.latLng(p[0], p[1]));
-//             });
-//         }
-//     });
-// });
-
+var heat = L.heatLayer([], { maxZoom: 12 }).addTo(map);
+$.getJSON('./points/json', function(data) {
+    var geojson = L.geoJson(data, {
+        onEachFeature: function(feature, layer) {
+            feature.geometry.coordinates.forEach(function(p) {
+                heat.addLatLng(L.latLng(p[0], p[1]));
+            });
+        }
+    });
+});
 
 // Add this generated geojson object to the map.
-paths.addTo(map);    
+// hea.addTo(map);    
 
 
 var geojson = L.mapbox.featureLayer()
