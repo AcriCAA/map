@@ -53,7 +53,7 @@ $.getJSON('./points.json', function(data) {
     var geojson = L.geoJson(data, {
         onEachFeature: function(feature, layer) {
             feature.geometry.coordinates.forEach(function(p) {
-                paths.addLatLng(L.latLng(p[0], p[1]));
+                paths.coordsToLatLng(L.latLng(p[0], p[1]));
             });
         }
     });
@@ -61,7 +61,7 @@ $.getJSON('./points.json', function(data) {
 
 
 // Add this generated geojson object to the map.
-paths.addTo(map);;     
+paths.addTo(map);    
 
 
 var geojson = L.mapbox.featureLayer()
