@@ -995,9 +995,11 @@ var geojson = {
 L.geoJson(geojson).addTo(map);
 
 
-paths = geojson.features; 
+ paths = geojson.features; 
 
  paths.forEach(function(path) {
+
+    var raw = [];
     for (var i = 0; i < path.geometry.coordinates.length; i++) {
     var tmp = [];
     tmp[0] = path.geometry.coordinates[i][1];
