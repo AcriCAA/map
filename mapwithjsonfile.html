@@ -82,11 +82,11 @@ function tick() {
     // Set the marker to be at the same point as one
     // of the segments or the line.
     marker.setLatLng(L.latLng(
-        getjson.coordinates[j][1],
-        geojson.coordinates[j][0]));
+        getjson.features[0].geometry.coordinates[j][1],
+        getjson.features[0].geometry.[j][0]));
 
     // Move to the next point of the line
     // until `j` reaches the length of the array.
-    if (++j < geojson[0].geometry.coordinates.length) setTimeout(tick, 500);
+    if (++j < geojson.features[0].coordinates.length) setTimeout(tick, 500);
 }
 </script>
