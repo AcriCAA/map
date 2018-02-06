@@ -58,15 +58,15 @@ $.getJSON('./points/json', function(data) {
 });
 
 // Add this generated geojson object to the map.
-// hea.addTo(map);    
 
 
-var geojson = L.mapbox.featureLayer()
-    .loadURL('./points.json')
-    .addTo(map);
+
+// var geojson = L.mapbox.featureLayer()
+//     .loadURL('./points.json')
+//     .addTo(map);
 
 
-    console.log(paths); 
+    console.log(heat); 
 
 // Create a counter with a value of 0.
 var j = 0;
@@ -78,16 +78,16 @@ var marker = L.marker([0, 0], {
   })
 }).addTo(map);
 
-// tick();
-// function tick() {
-//     // Set the marker to be at the same point as one
-//     // of the segments or the line.
-//     marker.setLatLng(L.latLng(
-//         geojson[0].geometry.coordinates[j][1],
-//         geojson[0].geometry.coordinates[j][0]));
+tick();
+function tick() {
+    // Set the marker to be at the same point as one
+    // of the segments or the line.
+    marker.setLatLng(L.latLng(
+        heat[0].coordinates[j][1],
+        heat[0].coordinates[j][0]));
 
-//     // Move to the next point of the line
-//     // until `j` reaches the length of the array.
-//     if (++j < geojson[0].geometry.coordinates.length) setTimeout(tick, 500);
-// }
+    // Move to the next point of the line
+    // until `j` reaches the length of the array.
+    if (++j < geojson[0].geometry.coordinates.length) setTimeout(tick, 500);
+}
 </script>
