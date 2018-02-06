@@ -995,7 +995,24 @@ var geojson = {
 L.geoJson(geojson).addTo(map);
 
 
-// paths = geojson.features; 
+paths = geojson.features; 
+
+ paths.forEach(function(path) {
+    for (var i = 0; i < path.geometry.coordinates.length; i++) {
+    var tmp = [];
+    tmp[0] = path.geometry.coordinates[i][1];
+    tmp[1] = path.geometry.coordinates[i][0];
+    raw.push(tmp);
+  }
+
+  var coords = L.polyline(raw),
+    animatedMarker = L.animatedMarker(coords.getLatLngs(), {
+        distance: 100,
+        interval: 2500,
+        autoStart: true
+});
+
+ }); 
 
 // for (var i = 0; i < paths.features[0].geometry.coordinates.length; i++) {
 //     var tmp = [];
