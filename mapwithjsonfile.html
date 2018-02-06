@@ -78,6 +78,7 @@ console.log(paths); // object Array
 console.log(json);  // object Object
 console.log(paths[0]); // Works! "How many times your heart beats in a day?(choose the closest)"
 // but it's not working because js doesn't wait for JSON to load and it starts using the variables that doesn't exist yet
+tick();
 });
 
 // Create a counter with a value of 0.
@@ -90,7 +91,7 @@ var marker = L.marker([0, 0], {
   })
 }).addTo(map);
 
-tick();
+
 function tick() {
     // Set the marker to be at the same point as one
     // of the segments or the line.
