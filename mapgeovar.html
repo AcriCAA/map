@@ -1251,6 +1251,13 @@ var geojson = {
 // Add this generated geojson object to the map.
 L.geoJson(geojson).addTo(map);
 
+ var bikeIcon = L.icon({
+      iconUrl: 'marker-bike-green-shadowed.png',
+      iconSize: [25, 39],
+      iconAnchor: [12, 39],
+      shadowUrl: null
+  });
+
 
  paths = geojson.features; 
 
@@ -1268,8 +1275,10 @@ L.geoJson(geojson).addTo(map);
     animatedMarker = L.animatedMarker(coords.getLatLngs(), {
         distance: 100,
         interval: 2500,
-        autoStart: true
+        autoStart: true,
+        icon: bikeIcon
 });
+
 
     map.addLayer(animatedMarker);
 
