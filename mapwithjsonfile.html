@@ -85,23 +85,30 @@ tick();
 var j = 0;
 
 // Create a marker and add it to the map.
-// var marker = L.marker([0, 0], {
-//   icon: L.mapbox.marker.icon({
-//     'marker-color': '#f86767'
-//   })
-// }).addTo(map);
+var marker = L.marker([0, 0], {
+  icon: L.mapbox.marker.icon({
+    'marker-color': '#f86767'
+  })
+}).addTo(map);
 
 
 function tick() {
 
+  paths.forEach(function(p1)){
+    var marker = L.marker([0, 0], {
+  icon: L.mapbox.marker.icon({
+    'marker-color': '#f86767'
+  })
+}).addTo(map);
+
+    
+  });
+
   paths.forEach(function(path) {
 
-    var marker = L.marker([0, 0], {
-    icon: L.mapbox.marker.icon({
-      'marker-color': '#f86767'
-    })
-    }).addTo(map);
 
+
+   
     marker.setLatLng(L.latLng(
         path.geometry.coordinates[j][1],
         path.geometry.coordinates[j][0]));
