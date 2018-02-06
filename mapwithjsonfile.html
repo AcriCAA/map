@@ -65,7 +65,7 @@ var geojson = L.mapbox.featureLayer()
     .loadURL('./points.json')
     .addTo(map);
 
-console.log(geojson); 
+console.log(geojson.features); 
 
 // Create a counter with a value of 0.
 var j = 0;
@@ -82,8 +82,8 @@ function tick() {
     // Set the marker to be at the same point as one
     // of the segments or the line.
     marker.setLatLng(L.latLng(
-        geojson.features[0].geometry.coordinates[j][1],
-        geojson.features[0].geometry.coordinates[j][0]));
+        geojson.features.0.geometry.coordinates[j][1],
+        geojson.features.0.geometry.coordinates[j][0]));
 
     // Move to the next point of the line
     // until `j` reaches the length of the array.
