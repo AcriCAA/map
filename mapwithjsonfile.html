@@ -117,10 +117,12 @@ console.log(markers);
 
   paths.forEach(function(path) {
 
+    var i = 0; 
 
+    markers[i].addTo(map); 
 
    
-    marker.setLatLng(L.latLng(
+    markers[i].setLatLng(L.latLng(
         path.geometry.coordinates[j][1],
         path.geometry.coordinates[j][0]));
 
