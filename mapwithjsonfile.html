@@ -65,7 +65,10 @@ var geojson = L.mapbox.featureLayer()
     .loadURL('./points.json')
     .addTo(map);
 
-console.log(geojson.features); 
+
+console.log(geojson); 
+
+console.log(geojson.geoJson.features); 
 
 // Create a counter with a value of 0.
 var j = 0;
