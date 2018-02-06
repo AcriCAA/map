@@ -61,14 +61,28 @@ var map = L.mapbox.map('map', 'mapbox.streets')
 
 
 
-var geojson = L.mapbox.featureLayer()
-    .loadURL('./points.json')
-    .addTo(map);
+// var geojson = L.mapbox.featureLayer()
+//     .loadURL('./points.json')
+//     .addTo(map);
 
 
-console.log(geojson); 
+// console.log(geojson); 
 
-console.log(geojson.features); 
+// console.log(geojson.features); 
+
+
+
+$.ajax({
+dataType: "json",
+async: false, // Makes sure to wait for load
+url: "/.points.json", //  https://www.dropbox.com/s/fmw63i4v7dtnx6t/package.json
+'success': function (json) {
+    points = json.quiz;
+    console.log(json);  // object Object
+    console.log(points); // object Array
+    // Finishes loading before js starts using it, and works as intended
+}
+});
 
 // Create a counter with a value of 0.
 var j = 0;
