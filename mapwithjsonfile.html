@@ -81,8 +81,7 @@ console.log(paths[0]); // Works! "How many times your heart beats in a day?(choo
 tick();
 });
 
-// Create a counter with a value of 0.
-var j = 0;
+
 
 // Create a marker and add it to the map.
 // var marker = L.marker([0, 0], {
@@ -98,8 +97,12 @@ var j = 0;
 
 function tick() {
 
-var markers = []
-paths.forEach(function(path) {
+  // Create a counter with a value of 0.
+var j = 0;
+
+var markers = [];
+
+for (var i = 0; i < paths.length; i++){
 
 var marker = L.marker([0, 0], {
   icon: L.mapbox.marker.icon({
@@ -109,7 +112,7 @@ var marker = L.marker([0, 0], {
 
 markers.push(marker); 
 
-}); 
+}
 
 console.log(markers); 
 
