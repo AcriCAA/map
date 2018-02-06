@@ -46,9 +46,9 @@ var featureLayer = L.mapbox.featureLayer()
 
 
 
-var heat = L.featureLayer().addTo(map);
+var heat = L.mapbox.featureLayer().addTo(map);
 $.getJSON('./points/json', function(data) {
-    var geojson = L.geoJson(data, {
+    var geojson = L.mapbox.geoJson(data, {
         onEachFeature: function(feature, layer) {
             feature.geometry.coordinates.forEach(function(p) {
                 heat.addLatLng(L.latLng(p[0], p[1]));
