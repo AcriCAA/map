@@ -330,8 +330,8 @@ var marker = L.marker([0, 0], {
   })
 }).addTo(map);
 
-tick();
-function tick() {
+tick(geojson, marker);
+function tick(geojson, marker) {
     // Set the marker to be at the same point as one
     // of the segments or the line.
     marker.setLatLng(L.latLng(
