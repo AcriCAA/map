@@ -83,7 +83,7 @@ function tick() {
     // of the segments or the line.
     marker.setLatLng(L.latLng(
         getjson.features[0].geometry.coordinates[j][1],
-        getjson.features[0].geometry.[j][0]));
+        getjson.features[0].geometry.coordinates[j][0]));
 
     // Move to the next point of the line
     // until `j` reaches the length of the array.
