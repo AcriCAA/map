@@ -39,9 +39,9 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiYWNyaWNhYSIsImEiOiJjamRhb2Y3dmo0MHoyMzNxZnluc
 var map = L.mapbox.map('map', 'mapbox.streets')
     .setView([39.938507, -75.180097], 15);
 
-var featureLayer = L.mapbox.featureLayer()
-    .loadURL('https://www.rideindego.com/stations/json/')
-    .addTo(map);
+// var featureLayer = L.mapbox.featureLayer()
+//     .loadURL('https://www.rideindego.com/stations/json/')
+//     .addTo(map);
 
 
 
@@ -66,7 +66,7 @@ $.getJSON('./points/json', function(data) {
 //     .addTo(map);
 
 
-console.log( JSON.stringify(heat));
+console.log( geojson);
 
 // Create a counter with a value of 0.
 var j = 0;
@@ -83,8 +83,8 @@ function tick() {
     // Set the marker to be at the same point as one
     // of the segments or the line.
     marker.setLatLng(L.latLng(
-        heat[0].coordinates[j][1],
-        heat[0].coordinates[j][0]));
+        geojson[0].coordinates[j][1],
+        geojson[0].coordinates[j][0]));
 
     // Move to the next point of the line
     // until `j` reaches the length of the array.
