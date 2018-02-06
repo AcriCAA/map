@@ -78,7 +78,7 @@ console.log(paths); // object Array
 console.log(json);  // object Object
 console.log(paths[0]); // Works! "How many times your heart beats in a day?(choose the closest)"
 // but it's not working because js doesn't wait for JSON to load and it starts using the variables that doesn't exist yet
-tick(paths);
+tick();
 });
 
 
@@ -94,26 +94,28 @@ tick(paths);
 
 
 
+map.featureLayer.on('ready', function(e) {
+    var markers = [];
+    this.eachLayer(function(marker) { markers.push(marker); });
+    
+});
 
-function tick(paths) {
+
+function tick() {
 
   // Create a counter with a value of 0.
 var j = 0;
+
 
 
   paths.forEach(function(path) {
 
     var i = 0; 
 
-// Create a marker and add it to the map.
-  var marker = L.marker([0, 0], {
-    icon: L.mapbox.marker.icon({
-      'marker-color': '#f86767'
-    })
-  }).addTo(map);
+    markers[i].addTo(map); 
 
    
-    marker.setLatLng(L.latLng(
+    markers[i].setLatLng(L.latLng(
         path.geometry.coordinates[j][1],
         path.geometry.coordinates[j][0]));
 
