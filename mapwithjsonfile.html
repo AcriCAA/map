@@ -94,14 +94,14 @@ var marker = L.marker([0, 0], {
 
 function tick() {
 
-  paths.forEach(function(p1)){
+  paths.forEach(function(p1){
     var marker = L.marker([0, 0], {
   icon: L.mapbox.marker.icon({
     'marker-color': '#f86767'
   })
 }).addTo(map);
 
-    
+
   });
 
   paths.forEach(function(path) {
