@@ -46,7 +46,7 @@ var featureLayer = L.mapbox.featureLayer()
 
 
 
-var heat = L.heatLayer([], { maxZoom: 12 }).addTo(map);
+var heat = L.featureLayer().addTo(map);
 $.getJSON('./points/json', function(data) {
     var geojson = L.geoJson(data, {
         onEachFeature: function(feature, layer) {
