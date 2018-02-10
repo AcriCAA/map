@@ -41,7 +41,7 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiYWNyaWNhYSIsImEiOiJjamRhb2Y3dmo0MHoyMzNxZnluc
 var map = L.mapbox.map('map', 'mapbox.streets')
     .setView([39.935500, -75.181496], 15);
 
-    
+
 
 var featureLayer = L.mapbox.featureLayer()
     .loadURL('https://www.rideindego.com/stations/json/')
@@ -1278,7 +1278,10 @@ L.geoJson(geojson).addTo(map);
         distance: 100,
         interval: 2500,
         autoStart: true,
-        icon: bikeIcon
+        icon: bikeIcon,
+        onEnd: function() {
+    // TODO: blow up this marker
+  }
 });
 
 
