@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+
+  <title>Rovr.bike</title>
+</head>
+<body>
+
+
+<!--     <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img class="whyabike-logo" alt="Brand" src="https://pbs.twimg.com/profile_images/722928646344818688/fwxHyr39.jpg">
+      </a>
+    </div>
+  </div>
+</nav> -->
+
+<div class="container">
+ 
+  
+ <!--  <div class="row">
+        <section class="col-xs-12 thirds-height">
+         
+          <p class="text-center">
+            
+
+          </p>
+                       
+
+                      
+          
+        </section>
+
+      </div>   --> 
+
+       <div class="row">
+       <section class="col-xs-12 thirds-height">
+         
+           <a href="/map.html"> <img class="img-responsive" src="img/Rovrbike.png"/></a>
+                     
+        </section>
+
+      </div> <!-- close row -->  
+      <div class="row">
+
+       <section class="col-xs-12 thirds-height">
+         
+            
+            
+                        
+        </section>
+
+      </div> <!-- close row -->  
+
+     
+</div><!-- content container -->
+
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+<script type="text/javascript">   
+// function Redirect() 
+// {  
+// window.location="http://www.whya.bike"; 
+// } 
+// document.write("You will be redirected to a new page in 5 seconds"); 
+// setTimeout('Redirect()', 2000);   
+
+var a=document.getElementsByTagName("a");
+for(var i=0;i<a.length;i++) {
+    if(!a[i].onclick && a[i].getAttribute("target") != "_blank") {
+        a[i].onclick=function() {
+                window.location=this.getAttribute("href");
+                return false; 
+        }
+    }
+}
+</script>
+</body>
+</html>

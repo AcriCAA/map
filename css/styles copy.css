@@ -1,0 +1,905 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,300);
+
+@import url(https://fonts.googleapis.com/css?family=Monoton);
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,400italic);
+
+
+body {
+
+  font-family: 'Open Sans', sans-serif;
+  
+}
+
+.navbar-inverse .navbar-nav>li>a {
+
+  color:white;
+
+}
+
+div.container-fluid h1 {
+
+
+  font-size: 3.5em;
+  /*color: #666666;*/
+
+  color:rgba(255,255,255,0.9);
+  /*font-weight: bold;*/
+  font-family: 'Monoton', cursive;
+
+}
+
+div.container-fluid h2 {
+
+
+  font-size: 2em;
+  color:rgba(255,255,255,0.9);
+  font-family: 'Monoton', cursive;
+
+}
+
+div.container-fluid h3 {
+
+
+  font-size: 2em;
+  color:rgba(255,255,255,0.9);
+  font-family: 'Monoton', cursive;
+}
+
+div.container-fluid p {
+
+font-family: 'Open Sans', sans-serif;
+font-size: 1em;
+color:rgba(255,255,255,0.9);
+}
+
+
+
+div.container-fluid a:hover {
+
+color:rgba(255,255,255,0.9);
+
+}
+
+div.container-fluid a:selected {
+
+color:rgba(255,255,255,0.9);
+
+}
+
+.font-white {
+
+color:rgba(255,255,255,0.9);
+
+}
+
+a.font-white:hover {
+
+color:rgba(255,255,255,0.9);
+
+}
+
+a.font-white:selected {
+
+color:rgba(255,255,255,0.9);
+
+}
+
+/********************** margins    **********************************/
+
+
+.top-margin-5 {
+
+margin-top: 5px;
+
+}
+
+.top-margin-10 {
+
+margin-top: 10px;
+
+}
+
+.top-margin-20 {
+
+margin-top: 20px;
+
+}
+
+.top-margin-30 {
+
+margin-top: 30px;
+
+}
+
+.top-margin-40 {
+
+margin-top: 40px;
+
+}
+
+.top-margin-50 {
+
+margin-top: 50px;
+
+}
+
+.top-margin-60 {
+
+margin-top: 60px;
+
+}
+
+.top-margin-70 {
+
+margin-top: 70px;
+
+}
+
+.top-margin-80 {
+
+margin-top: 80px;
+
+}
+
+.top-margin-90 {
+
+margin-top: 90px;
+
+}
+
+
+.top-margin-100 {
+
+margin-top: 100px;
+
+}
+
+
+.top-margin-110 {
+
+margin-top: 110px;
+
+}
+
+
+.top-margin-120 {
+
+margin-top: 120px;
+
+}
+
+
+.top-margin-130 {
+
+margin-top: 130px;
+
+}
+
+
+.top-margin-140 {
+
+margin-top: 140px;
+
+}
+
+
+.top-margin-150 {
+
+margin-top: 150px;
+
+}
+
+
+
+
+.top-margin-160 {
+
+margin-top: 160px;
+
+}
+
+
+
+
+.top-margin-170 {
+
+margin-top: 170px;
+
+}
+
+
+
+.top-margin-180 {
+
+margin-top: 180px;
+
+}
+
+
+.top-margin-190 {
+
+margin-top: 190px;
+
+}
+
+
+.top-margin-200 {
+
+margin-top: 200px;
+
+}
+
+/********************** animations *********************************/
+
+
+.kaleidisope {
+  /*height: 250px;
+  width: 250px;*/
+  height: 100%;
+  width:100%;
+  margin: 0 auto;
+  background-color: #c63bbe;
+  animation-name: colorify;
+  animation-duration: 1.5s; 
+  animation-timing-function: ease-out; 
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes colorify {
+  0% {
+    
+    background-color: #ffc321;
+    /*border-radius: 100%;*/
+  }
+  50% {
+    background-color: #c63bbe;
+  }
+  100% {
+    
+    background-color: #ffc321;
+  }
+}
+
+
+.splash {
+  /*height: 250px;
+  width: 250px;*/
+  height: 100%;
+  width:100%;
+  margin: 0 auto;
+  background-color: #c63bbe;
+  animation-name: stretch;
+  animation-duration: 1.5s; 
+  animation-timing-function: ease-out; 
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes stretch {
+  0% {
+    transform: scale(.3);
+    background-color: #ffc321;
+    /*border-radius: 100%;*/
+  }
+  50% {
+    background-color: #c63bbe;
+  }
+  100% {
+    transform: scale(1.2);
+    background-color: #ffc321;
+  }
+}
+
+
+.public {
+
+  width: 100%;
+  height: 100%;
+  background-color:#ffc321;
+  animation: public-pulse 3s infinite;
+
+}
+
+@keyframes public-pulse {
+  0%, 100% {
+    background-color: #fdce4e;
+  }
+  50% {
+    background-color: #ffc321;
+  }
+}
+
+.car {
+  width: 100%;
+  height: 100%;
+  background-color:#c63bbe;
+  animation: car-pulse 3s infinite;
+
+}
+
+
+
+@keyframes car-pulse {
+  0%, 100% {
+    background-color: #f9aaf4;
+  }
+  50% {
+    background-color: #c63bbe;
+  }
+}
+
+
+.bike {
+  width: 100%;
+  height: 100%;
+  background-color:#17cbff;
+  animation: bike-pulse 2s infinite;
+
+}
+
+
+
+@keyframes bike-pulse {
+  0%, 100% {
+    background-color: #9de6fb;
+  }
+  50% {
+    /*background-color: #17cbff;*/
+    background-color: #0489f9;
+  }
+}
+
+.bike-bolt {
+  width: 100%;
+  height: 100%;
+  background-color:#17cbff;
+  animation: bike-bolt-pulse 1s infinite;
+
+}
+
+
+
+@keyframes bike-bolt-pulse {
+  0%, 100% {
+    background-color: #9de6fb;
+  }
+  50% {
+    background-color: #17cbff;
+    /*background-color: #0489f9;*/
+  }
+}
+
+.other-bolt {
+  width: 100%;
+  height: 100%;
+  background-color:#17cbff;
+  animation: other-bolt-pulse 1s infinite;
+
+}
+
+
+
+@keyframes other-bolt-pulse {
+  0%, 100% {
+    background-color: #9de6fb;
+  }
+  50% {
+    background-color: #c63bbe;
+  }
+}
+
+
+
+.walk {
+  width: 100%;
+  height: 100%;
+  background-color:#f8ff46;
+  animation: walk-pulse 3s infinite;
+
+}
+
+
+
+@keyframes walk-pulse {
+  0%, 100% {
+    background-color: #f8fc80;
+  }
+  50% {
+    background-color: #f8ff46;
+  }
+}
+
+/********************* result option min-height ******************************/
+
+
+.full-height {
+
+  min-height:370px;
+
+}
+
+.quarter-height {
+
+min-height: 150px;
+
+}
+
+
+.quarter-height-plus {
+
+min-height: 195px;
+
+}
+
+.thirds-height {
+ min-height: 222px;
+
+}
+
+.half-height {
+
+min-height:333px;
+
+}
+
+.half-height-start {
+
+min-height:315px;
+
+}
+
+.menu-text {
+
+  font-size:.67em;
+ 
+}
+
+.menu-text-hide {
+
+  color:#fc4bf2;
+ 
+}
+
+a.menu-text-hide {
+color:#fc4bf2;
+
+}
+
+a.menu-text-hide:hover{
+
+  color:#fc4bf2;
+}
+
+.no-gap {
+
+ padding:0px;
+  margin-top:-15px;
+
+}
+
+.small-gap {
+
+ padding:0px;
+  margin-top:-14px;
+}
+
+/********************** background colors *************************/
+
+
+.gray-text {
+
+  color:#e0e0e0;
+}
+
+.transports {
+
+
+  /*margin-top: 50px;*/
+  /*margin-bottom: 10px;*/
+  padding:6px;
+}
+
+.orange-bg {
+
+background-color: #fdce4e;
+
+}
+
+.blue-bg {
+background-color:#17cbff;
+}
+
+.turquoise-bg {
+
+
+  background-color:#99ffff;
+}
+
+.purple-bg {
+
+
+background-color: #8580e1;
+
+}
+
+.fuscia-bg {background-color:#f9aaf4;}
+
+.purple-neon-bg {background-color:#c63bbe;}
+
+
+.purple-neon-lt-bg {background-color:#fc4bf2;}
+
+
+.yellow-lt{background-color: #f8ff46;}
+
+.purple-violet{background-color: #8905ff;}
+
+
+
+
+
+.icon {
+  max-width: 150px;
+  margin: 0 auto;
+  display: block;
+}
+
+.whyabike-logo {
+
+
+height: 200px; 
+
+}
+
+
+.where-to {
+
+margin-top: 100px;
+text-transform: uppercase;
+font-weight: bold;
+
+}
+
+.concierge-top {
+
+margin-top: 25px;
+text-transform: uppercase;
+font-weight: bold;
+
+}
+
+.btn-circle-margin {
+
+margin-top:10px;
+
+}
+
+
+  .btn-circle {
+ width: 175px;
+ height: 55px;
+ text-align: center;
+ padding: 3px 0;
+ 
+ 
+ /*border-radius: 20px;*/
+ border: 3px solid #4cff19;
+  color:black;
+         text-transform: uppercase;
+         font-size: 1em;
+}
+.btn-circle:hover{
+border: 3px solid #4cff19;
+  background-color:#4cff19
+}
+
+
+  .btn-circle-stop {
+width: 175px;
+ height: 55px;
+ text-align: center;
+ padding: 3px 0;
+ 
+ 
+ /*border-radius: 20px;*/
+ border: 3px solid red;
+  color:black;
+         text-transform: uppercase;
+         font-size: 1em;
+}
+
+.btn-circle-stop:hover{
+
+
+  border:red;
+  background-color: red;
+}
+
+.position-anywhere {
+position: absolute;
+         margin-top: 520px; 
+         margin-left:110px; 
+         z-index:1;
+
+}
+
+a.btn-signup {
+         border-radius: 0;
+         border: 3px solid #4cff19;
+         
+         /*background:#4cff19;*/
+         background-repeat: no-repeat;
+
+         /*color: #8690f0;*/
+         color:black;
+         text-transform: uppercase;
+         letter-spacing: .02em;
+         padding: 20px;
+         margin-top: 5px;
+         margin-bottom: 5px;
+         font-size: 1em;
+         
+         
+         }
+
+
+      a.text-link {
+
+          color: black;
+          font-weight: bold;
+          text-decoration: underline;
+
+      }
+
+      a.text-link:visited {
+
+          color:black;
+          text-decoration: underline;
+
+      }
+  a.text-link:hover {
+
+    color:#4cff19;
+    text-decoration: none;
+  
+
+
+  }
+         
+ a.btn-signup:hover {
+     border-radius: 0;
+     border: 3px black;
+     background: #4cff19;
+     color: #8690f0;
+     text-transform: uppercase;
+         letter-spacing: .02em;
+         padding: 20px;
+         margin-top: 5px;
+         margin-bottom: 5px;
+         font-size: 1em;
+
+         
+ }
+
+
+
+
+
+a.btn-go {
+         border-radius: 0;
+         border: 5px solid #4cff19;
+         
+         /*background:#4cff19;*/
+         background-repeat: no-repeat;
+
+         /*color: #8690f0;*/
+         color:#4cff19;
+         text-transform: uppercase;
+         letter-spacing: .02em;
+         padding: 20px 20px 20px 20px;
+         margin-top: 50px;
+         margin-bottom: 5px;
+         font-size: 1em;
+         font-weight:bold;
+         }
+         
+ a.btn-go:hover {
+     border-radius: 0;
+     border: 5px black;
+     background: #4cff19;
+     color: #8690f0;
+     text-transform: uppercase;
+     letter-spacing: .02em;
+     background-repeat: no-repeat;
+     padding: 20px 20px 20px 20px;
+     margin-top: 50px;
+     margin-bottom: 5px;
+     font-weight:bold;
+     font-size: 1em;
+ }
+
+
+
+a.btn-submit {
+             border-radius: 0;
+             border: 3px solid #4cff19;
+             
+            /* background:#4cff19;*/
+             background-repeat: no-repeat;
+
+            /* color: #666666;*/
+            color:black;
+             text-transform: uppercase;
+             letter-spacing: .02em;
+             padding: 20px 20px 20px 20px;
+             margin-top: 15px;
+             margin-bottom: 5px;
+             font-size: 2em;
+             font-weight:bold;
+         }
+         
+         a.btn-submit:hover {
+             border-radius: 0;
+             border: 5px black;
+             background: #3EE40E;
+             color: #666666;
+             text-transform: uppercase;
+             letter-spacing: .02em;
+             background-repeat: no-repeat;
+             padding: 20px 20px 20px 20px;
+             margin-top: 15px;
+             margin-bottom: 5px;
+             font-weight:bold;
+             font-size: 2em;
+         }
+
+
+/************************  FORM INPUTS **************************************/
+
+input[type=whereto] {
+  
+
+   height: 85px;
+  /* margin-top: 50px;*/
+   font-size: 1.53em;
+   color:white;
+   background-color: rgba(67,67,67,0.4);
+   
+}
+
+select {
+
+
+   height: 50px;
+  /* margin-top: 50px;*/
+   font-size: 1em;
+   width: 75%;
+   color:white;
+   background-color: rgba(67,67,67,0.7);
+
+}
+
+input[type=onboard] {
+  
+
+   height: 50px;
+  /* margin-top: 50px;*/
+   font-size: 1em;
+   width: 75%;
+   color:white;
+   background-color: rgba(67,67,67,0.4);
+   
+}
+
+
+
+
+
+input::-webkit-input-placeholder {
+   color: white;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+
+input:-ms-input-placeholder {  
+   color: white;  
+}
+
+
+
+input[type=concierge] {
+  
+
+   min-height: 222px;
+   /*margin-top: 50px;*/
+   font-size: 1.53em;
+   color:white;
+   background-color: rgba(67,67,67,0.4);
+}
+
+
+/**********************************************************************/
+
+  .shop {
+        position: absolute;
+        top: 88%;
+        left: 1%;
+        z-index: 5;
+        height: 50px;
+        width: 90%;
+        /*border-radius: 30px; */
+        
+      
+      }
+
+       .fontify {
+
+
+        font-family: 'Monoton', cursive;
+        font-size: 20px;
+        text-transform: uppercase;
+      }
+
+.bigify {
+
+font-size: 2em;
+
+}
+
+.minify {
+
+font-size: .5em;
+
+}
+
+
+
+.services section {
+  text-align: center;
+}
+
+.borderify {
+
+ border-radius: 0;
+ border: 2px solid #4cff19;
+ padding: 5px 5px 5px 5px;
+
+}
+
+@media(min-width: 1200px) {
+  h3 {
+    margin-top: 0;
+  }
+  .services section {
+    text-align: left;
+  }
+
+  .min-height-box {
+
+min-height: 300px;
+
+
+} 
+
+
+}
+  
+
